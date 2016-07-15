@@ -1,19 +1,20 @@
 <#  
-.SYNOPSIS  Import a dvSwitch configuration  
-.DESCRIPTION The function will import the dvSwitch
+.SYNOPSIS  Import a VDSwitch configuration  
+.DESCRIPTION The function will import the VDSwitch
   configuration(s) from a file. 
   
 .PARAMETER Path
   The path to a filename where the config is stored.
 .PARAMETER IncludePortgroups
-  Switch that indicates if only the dvSwitch configuration
-  or the dvSwitch and all portgroups should be exported
+  Switch that indicates if only the VDSwitch configuration
+  or the VDSwitch and all portgroups should be exported
  .PARAMETER EntityImportType
   The EntityImportType enum defines the import type for 
-  the DistributedVirtualSwitchManager.DVSManagerImportEntity_Task operation. 
+  the DistributedVirtualSwitchManager.DVSManagerImportEntity_Task 
+  operation. 
 .EXAMPLE
-  PS> Restore-dvSwConfig -Path C:\dvswconfig.xml -EntityImportType:applyToEntitySpecified
-  
+  PS> Import-VDSwitch -Path C:\dvswconfig.xml -EntityImportType:applyToEntitySpecified
+   
 .NOTES
 NAME: Import-VDSwitch
 AUTHOR: Max Daneri, VMware 

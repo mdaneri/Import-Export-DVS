@@ -1,5 +1,5 @@
 <#  
-.SYNOPSIS  Export a dvSwitch configuration  
+.SYNOPSIS  Export a VDSwitch configuration  
 .DESCRIPTION The function will export the dvSwitch
   configuration(s) to a file. 
   This requires at least vSphere 5.1.
@@ -10,13 +10,13 @@
   The path to a filename where the config should be
   written to.
 .PARAMETER IncludePortgroups
-  Switch that indicates if only the dvSwitch configuration
-  or the dvSwitch and all portgroups should be exported
+  Switch that indicates if only the VDSwitch configuration
+  or the VDSwitch and all portgroups should be exported
 .EXAMPLE
-  PS> Export-dvSwConfig -Name DSwitch01 -Path C:\dvswconfig.xml -IncludePortgroups
+  PS> Export-VDSwitch -Name DSwitch01 -Path C:\dvswconfig.xml -IncludePortgroups
 .EXAMPLE
   PS> $dvSw = Get-VDSwitch -Name DSwitch01
-  PS> $dvsw | Export-dvSwConfig -Path C:\dvswconfig.xml
+  PS> $dvsw | Export-VDSwitch -Path C:\dvswconfig.xml
   
 .NOTES
 NAME: Export-VDSwitch
